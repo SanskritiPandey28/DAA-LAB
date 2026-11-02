@@ -12,6 +12,18 @@
     }
     return -1;
  }
+ 
+int linearSearch(int arr[], int n, int key, int i) {
+    if (i == n) {
+        return -1;  // Base case: element not found
+    }
+
+    if (arr[i] == key) {
+        return i;   // Element found
+    }
+
+    return linearSearch(arr, n, key, i + 1);
+}
 
  
  int main(){
